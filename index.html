@@ -11,7 +11,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!-- Font Family -->
-    <link href="style.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
 
 </head>
 
@@ -34,7 +34,7 @@
             <div class="row mt-3">
                 <div class="col-md-10 offset-md-1 mb-3">
 
-                    <form>
+                    <form onsubmit="save(); return false;" id="formAluno">
                         <!-- Inputs -->
                         <div class="row mb-3">
                             <label for="inputName" class="col-sm-2 col-form-label">Nome:</label>
@@ -56,9 +56,9 @@
 
                         <!-- Select Curso -->
                         <div class="row mb-3">
-                            <label for="selectCategory" class="col-sm-2 col-form-label">Categoia:</label>
+                            <label for="selectCourse" class="col-sm-2 col-form-label">Curso:</label>
                             <div class="col-sm-4">
-                                <select class="form-select" aria-label="Default select example" id="selectCategory" required>
+                                <select class="form-select" aria-label="Default select example" id="selectCourse" required>
                                     <option value="" selected>Escolha:</option>
                                     <option value="1">Java</option>
                                     <option value="2">Python</option>
@@ -109,7 +109,7 @@
             <!-- Table Alunos -->
             <div class="row mt-3">
                 <div class="col-md-10 offset-md-1 mb-3">
-                    <table class="table">
+                    <table class="table" id="tableAlunos">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
