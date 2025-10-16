@@ -21,90 +21,87 @@
         <div class="display-5 fw-semibold">Cadastro de alunos</div>
     </header>
 
-    <main>
+    <main class="container">
 
         <!-- Formulário de Cadastro -->
-        <div class="row mt-3">
+        <section>
+            <!-- Title -->
+            <div class="display-6 mt-3">
+                Formulário de Cadastro:
+            </div>
 
-            <section>
-                <!-- Title -->
-                <div class="display-6 ms-5 mt-3">
-                    Formulário de Cadastro:
+            <!-- Forms -->
+            <div class="row mt-3">
+                <div class="col-md-10 offset-md-1 mb-3">
+
+                    <form>
+
+                        <!-- Inputs -->
+                        <div class="row mb-3">
+                            <label for="inputName" class="col-sm-2 col-form-label">Nome:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputName">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputEmail" class="col-sm-2 col-form-label">Email:</label>
+                            <div class="col-sm-5">
+                                <input type="email" class="form-control" id="inputEmail"
+                                    placeholder="exemplo@email.com">
+                            </div>
+                            <label for="inputPhone" class="col-sm-1 col-form-label">Telefone:</label>
+                            <div class="col-sm-4">
+                                <input type="phone" class="form-control" id="inputPhone" placeholder="(11) 99999-9999">
+                            </div>
+                        </div>
+
+                        <!-- Select Curso -->
+                        <div class="row mb-3">
+                            <label for="selectCategory" class="col-sm-2 col-form-label">Categoia:</label>
+                            <div class="col-sm-4">
+                                <select class="form-select" aria-label="Default select example" id="selectCategory">
+                                    <option value="" selected>Escolha:</option>
+                                    <option value="1">Java</option>
+                                    <option value="2">Python</option>
+                                    <option value="3">C#</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- RadioBox Turno -->
+                        <fieldset class="row mb-3">
+                            <legend class="col-form-label col-sm-2 pt-0">Turnos</legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios"
+                                        id="gridRadiosMorning" value="option1">
+                                    <label class="form-check-label" for="gridRadiosMorning">
+                                        Manhã
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios"
+                                        id="gridRadiosAfternoon" value="option2">
+                                    <label class="form-check-label" for="gridRadiosAfternoon">
+                                        Tarde
+                                    </label>
+                                </div>
+                                <div class="form-check disabled">
+                                    <input class="form-check-input" type="radio" name="gridRadios"
+                                        id="gridRadiosEvening" value="option3">
+                                    <label class="form-check-label" for="gridRadiosEvening">
+                                        Noturno
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </form>
+
                 </div>
+            </div>
 
-                <!-- Forms -->
-                <div class="row mt-3">
-                    <div class="col-md-10 offset-md-1 mb-3">
-
-                        <form>
-
-                            <!-- Inputs -->
-                            <div class="row mb-3">
-                                <label for="inputName" class="col-sm-2 col-form-label">Nome:</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="inputName">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label for="inputEmail" class="col-sm-2 col-form-label">Email:</label>
-                                <div class="col-sm-5">
-                                    <input type="email" class="form-control" id="inputEmail"
-                                        placeholder="exemplo@email.com">
-                                </div>
-                                <label for="inputPhone" class="col-sm-1 col-form-label">Telefone:</label>
-                                <div class="col-sm-4">
-                                    <input type="phone" class="form-control" id="inputPhone"
-                                        placeholder="(11) 99999-9999">
-                                </div>
-                            </div>
-
-                            <!-- Select Curso -->
-                            <div class="row mb-3">
-                                <label for="selectCategory" class="col-sm-2 col-form-label">Categoia:</label>
-                                <div class="col-sm-4">
-                                    <select class="form-select" aria-label="Default select example" id="selectCategory">
-                                        <option value="" selected>Escolha:</option>
-                                        <option value="1">Java</option>
-                                        <option value="2">Python</option>
-                                        <option value="3">C#</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- RadioBox Turno -->
-                            <fieldset class="row mb-3">
-                                <legend class="col-form-label col-sm-2 pt-0">Turnos</legend>
-                                <div class="col-sm-10">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gridRadios"
-                                            id="gridRadiosMorning" value="option1">
-                                        <label class="form-check-label" for="gridRadiosMorning">
-                                            Manhã
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gridRadios"
-                                            id="gridRadiosAfternoon" value="option2">
-                                        <label class="form-check-label" for="gridRadiosAfternoon">
-                                            Tarde
-                                        </label>
-                                    </div>
-                                    <div class="form-check disabled">
-                                        <input class="form-check-input" type="radio" name="gridRadios"
-                                            id="gridRadiosEvening" value="option3">
-                                        <label class="form-check-label" for="gridRadiosEvening">
-                                            Noturno
-                                        </label>
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <button type="submit" class="btn btn-primary">Cadastrar</button>
-                        </form>
-
-                    </div>
-                </div>
-
-            </section>
+        </section>
         </div>
 
 
@@ -114,7 +111,7 @@
             </div>
         </section>
 
-        </div>
+
     </main>
 
     <footer class="text-center bg-secondary text-white p-2 fixed-bottom">@sistemas P&D</footer>
