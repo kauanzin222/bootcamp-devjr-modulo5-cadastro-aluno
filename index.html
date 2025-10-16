@@ -18,7 +18,7 @@
 <body>
 
     <header class="text-center bg-secondary text-white p-2">
-        <div class="display-5 fw-semibold">Cadastro de alunos</div>
+        <div class="display-5 fw-semibold">Cadastro de Alunos</div>
     </header>
 
     <main class="container">
@@ -35,7 +35,6 @@
                 <div class="col-md-10 offset-md-1 mb-3">
 
                     <form>
-
                         <!-- Inputs -->
                         <div class="row mb-3">
                             <label for="inputName" class="col-sm-2 col-form-label">Nome:</label>
@@ -97,17 +96,33 @@
                         </fieldset>
                         <button type="submit" class="btn btn-primary">Cadastrar</button>
                     </form>
-
                 </div>
             </div>
-
         </section>
-        </div>
-
 
         <section>
+            <!-- Title -->
             <div class="display-6 mt-3">
                 Alunos Cadastrados:
+            </div>
+
+            <!-- Table Alunos -->
+            <div class="row mt-3">
+                <div class="col-md-10 offset-md-1 mb-3">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Telefone</th>
+                                <th scope="col">Curso</th>
+                                <th scope="col">Turno</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
