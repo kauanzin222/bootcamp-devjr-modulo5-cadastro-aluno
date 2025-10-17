@@ -1,4 +1,4 @@
-
+$('#inputPhone').mask('(00) 00000-0000');
 
 var courses = [
     { id: 1, name: "Java" },
@@ -6,10 +6,10 @@ var courses = [
     { id: 3, name: "C#" },
 ];
 
-    var turnos = [
-    { id: 1, name: "Manhã" },
-    { id: 2, name: "Tarde" },
-    { id: 3, name: "Noite" },
+var turnos = [
+    { id: "1", name: "Manhã" },
+    { id: "2", name: "Tarde" },
+    { id: "3", name: "Noturno" },
 ];
 
 var alunos = [];
@@ -76,12 +76,18 @@ function addNewRow(aluno) {
 
     newRow.insertCell().appendChild(courseNode);
 
+
     // insert shift aluno 
-    for (let turno of turnos)
-        if (turno.id == aluno.turno) {
+    for (let turno of turnos) {
+        console.log(
+            "Comparando:", turno.id, "(tipo:", typeof turno.id, ")",
+            "com:", aluno.turno, "(tipo:", typeof aluno.turno, ")"
+        );
+        if (turno.id === aluno.turno) {
             var turnoNode = document.createTextNode(turno.name);
             break;
         }
+    }
 
     newRow.insertCell().appendChild(turnoNode);
 }
