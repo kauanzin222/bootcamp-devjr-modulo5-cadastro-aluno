@@ -5,4 +5,10 @@ Project for module progression. Improving HTML, JavaScript &amp; BootStrap. The 
 
 
 --- 
-### Final Result: 
+## Final Result: 
+
+### - Desktop: 
+![desktop_version](images/desktopResult.png) 
+
+### - Mobile: 
+![mobile_version](images/mobileResult.png)
