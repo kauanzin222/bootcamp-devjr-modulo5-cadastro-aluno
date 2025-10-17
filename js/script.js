@@ -60,11 +60,19 @@ function addNewRow(aluno) {
 
     // insert email aluno
     var emailNode = document.createTextNode(aluno.email);
-    newRow.insertCell().appendChild(emailNode);
 
+    var cell = newRow.insertCell();
+    cell.className = "d-none d-md-table-cell";
+
+    cell.appendChild(emailNode);
+    
     // insert phone aluno
     var phoneNode = document.createTextNode(aluno.phone);
-    newRow.insertCell().appendChild(phoneNode);
+
+    cell = newRow.insertCell();
+    cell.className = "d-none d-md-table-cell";
+
+    cell.appendChild(phoneNode);
 
     // insert course aluno 
     for (let course of courses) {
@@ -89,5 +97,8 @@ function addNewRow(aluno) {
         }
     }
 
-    newRow.insertCell().appendChild(turnoNode);
+    cell = newRow.insertCell();
+    cell.className = "d-none d-md-table-cell";
+
+    cell.appendChild(turnoNode);
 }
