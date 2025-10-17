@@ -6,11 +6,11 @@ var courses = [
     { id: 3, name: "C#" },
 ];
 
-/*var turnos = [
+    var turnos = [
     { id: 1, name: "Manhã" },
     { id: 2, name: "Tarde" },
     { id: 3, name: "Noite" },
-];*/
+];
 
 var alunos = [];
 
@@ -24,7 +24,7 @@ function save() {
         email: document.getElementById("inputEmail").value,
         phone: document.getElementById("inputPhone").value,
         course: document.getElementById("selectCourse").value,
-        turno: document.getElementsByName("gridRadios").checked,
+        turno: getRadioValue(),
     }
 
 
@@ -37,6 +37,13 @@ function save() {
     console.log(aluno);
 };
 
+function getRadioValue() {
+    radios = document.getElementsByName("gridRadios");
+
+    for (let radio of radios)
+        if (radio.checked)
+            return radio.value;
+};
 
 function addNewRow(aluno) {
     var table = document.getElementById("tableAlunos");
@@ -70,9 +77,11 @@ function addNewRow(aluno) {
     newRow.insertCell().appendChild(courseNode);
 
     // insert shift aluno 
-    var turno = aluno.turno.value;
-    var turnoNode = document.createTextNode(turno);
+    for (let turno of turnos)
+        if (turno.id == aluno.turno) {
+            var turnoNode = document.createTextNode(turno.name);
+            break;
+        }
 
     newRow.insertCell().appendChild(turnoNode);
-
 }
